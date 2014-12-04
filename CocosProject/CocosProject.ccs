@@ -1,0 +1,14 @@
+<Solution>
+  <PropertyGroup Name="CocosProject" Version="2.0.2.0" Type="CocosStudio" />
+  <SolutionFolder>
+    <Group ctype="ResourceGroup">
+      <RootFolder Name=".">
+        <Project Name="MainScene.csd" />
+        <Image Name="bg_jan.jpg" />
+        <Image Name="Actor28_0_0_S04.png" />
+        <Image Name="dot_waku.png" />
+        <File Name="misaki_gothic.ttf" />
+      </RootFolder>
+    </Group>
+  </SolutionFolder>
+</Solution>
