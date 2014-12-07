@@ -2,7 +2,23 @@
   <PropertyGroup Type="Scene" Name="MainScene" ID="3798e16b-d862-4c24-a7ac-b20c0339038e" Version="2.0.2.0" />
   <Content ctype="GameProjectContent">
     <Content>
-      <Animation Duration="0" Speed="1.0000" />
+      <Animation Duration="30" Speed="1.0000">
+        <Timeline ActionTag="-1202204492" FrameType="PositionFrame">
+          <PointFrame FrameIndex="0" X="640.0000" Y="159.5000" />
+          <PointFrame FrameIndex="15" X="420.0000" Y="159.5000" />
+        </Timeline>
+        <Timeline ActionTag="1113508365" FrameType="PositionFrame">
+          <PointFrame FrameIndex="15" X="240.0000" Y="160.0000" />
+        </Timeline>
+        <Timeline ActionTag="1113508365" FrameType="ScaleFrame">
+          <PointFrame FrameIndex="15" X="0.0100" Y="0.0100" />
+          <PointFrame FrameIndex="30" X="1.0000" Y="1.0000" />
+        </Timeline>
+        <Timeline ActionTag="1113508365" FrameType="VisibleFrame">
+          <BoolFrame FrameIndex="0" Value="False" />
+          <BoolFrame FrameIndex="15" Value="True" />
+        </Timeline>
+      </Animation>
       <ObjectData Name="Scene" CanEdit="False" FrameEvent="" ctype="SingleNodeObjectData">
         <Position X="0.0000" Y="0.0000" />
         <Scale ScaleX="1.0000" ScaleY="1.0000" />
@@ -23,22 +39,22 @@
             <FileData Type="Normal" Path="bg_jan.jpg" />
           </NodeObjectData>
           <NodeObjectData Name="Sprite_actor" ActionTag="-1202204492" FrameEvent="" Tag="7" ObjectIndex="2" ctype="SpriteObjectData">
-            <Position X="420.5000" Y="159.5000" />
+            <Position X="420.0000" Y="159.5000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <CColor A="255" R="255" G="255" B="255" />
             <Size X="352.0000" Y="415.0000" />
-            <PrePosition X="0.8760" Y="0.4984" />
+            <PrePosition X="0.8750" Y="0.4984" />
             <PreSize X="0.0000" Y="0.0000" />
             <FileData Type="Normal" Path="Actor28_0_0_S04.png" />
           </NodeObjectData>
-          <NodeObjectData Name="Panel_1" ActionTag="1113508365" FrameEvent="" Tag="4" ObjectIndex="1" TouchEnable="True" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Enable="True" LeftEage="3" RightEage="3" TopEage="3" BottomEage="3" Scale9OriginX="3" Scale9OriginY="3" Scale9Width="10" Scale9Height="10" ctype="PanelObjectData">
-            <Position X="136.5000" Y="71.5000" />
+          <NodeObjectData Name="Panel_1" ActionTag="1113508365" FrameEvent="" Tag="4" ObjectIndex="1" PrePositionEnabled="True" TouchEnable="True" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Enable="True" LeftEage="3" RightEage="3" TopEage="3" BottomEage="3" Scale9OriginX="3" Scale9OriginY="3" Scale9Width="10" Scale9Height="10" ctype="PanelObjectData">
+            <Position X="240.0000" Y="160.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
-            <AnchorPoint />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <CColor A="255" R="255" G="255" B="255" />
             <Size X="200.0000" Y="200.0000" />
-            <PrePosition X="0.2844" Y="0.2234" />
+            <PrePosition X="0.5000" Y="0.5000" />
             <PreSize X="0.4167" Y="0.6250" />
             <Children>
               <NodeObjectData Name="Text_1" ActionTag="1657688291" FrameEvent="" Tag="5" ObjectIndex="1" FontSize="20" LabelText="CocosStudio Sample" ctype="TextObjectData">

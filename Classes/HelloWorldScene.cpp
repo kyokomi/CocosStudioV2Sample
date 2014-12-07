@@ -76,22 +76,34 @@ bool HelloWorld::init()
     // add the sprite as a child to this layer
     this->addChild(sprite, 0);
 
-    // Cocos Studio v2読み込み
+    // --- Cocos Studio v2読み込み ---
     
     CSLoader::getInstance()->setRecordProtocolBuffersPath(true); // .csbを読み込んだディレクトリを保持してリソースを探す指定
     auto mainScene = CSLoader::getInstance()->createNodeFromProtocolBuffers("res/MainScene.csb");
     this->addChild(mainScene);
     
-    // ボタンイベント
+    // --- Animation ---
+    
+    auto action = timeline::ActionTimelineCache::getInstance()->createActionFromProtocolBuffers("res/MainScene.csb");
+    if(action) {
+        action->setTimeSpeed(action->getTimeSpeed() / 2);
+        mainScene->runAction(action);
+        action->gotoFrameAndPlay(0, false);
+    }
+
+    // --- ボタンイベント ---
     
     // 変更するラベルを取得（Panel_1/Text_1）
     auto textLabel = mainScene->getChildByName("Panel_1")->getChildByName<ui::Text*>("Text_1");
     // ボタンを取得してクリックイベントを設定
-    mainScene->getChildByName<ui::Button*>("Button_1")->addClickEventListener([textLabel](Ref *ref) {
+    mainScene->getChildByName<ui::Button*>("Button_1")->addClickEventListener([textLabel, action](Ref *ref) {
         // ボタン押した時の処理
         
         // ラベルの内容を書き換える
         textLabel->setString("Test !!!!!!!!!!!!");
+        
+        //
+        action->gotoFrameAndPlay(0, false);
     });
     
     return true;
